@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.20)
+
+project(mobile_robot_sim VERSION 1.0)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(mobile_robot_sim
+    src/main.cpp
+    src/robot.cpp
+    src/obstacle.cpp
+    src/environment.cpp
+)
+
+target_include_directories(mobile_robot_sim
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+
+)
