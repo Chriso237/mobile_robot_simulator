@@ -39,6 +39,6 @@ void Environment::remove_obstacle(int obstacle_id){
         }
     }
 
-    std::cout << "No obstacle corresponding";
+    std::cout << "No obstacle corresponding" << std::endl;
 
 }
