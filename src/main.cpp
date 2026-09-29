@@ -15,40 +15,16 @@ int main(){
 
    Environment env(10.0,10.0);
    Obstacle obstacle_1(5.0,5.5,1.2,1.2);
-   Obstacle obstacle_2(-5.0,-5.5,1.2,1.2);
-   Obstacle obstacle_3(0.0,0.0,20.0,20.0);
+   Obstacle obstacle_2(5.0,5.5,1.2,1.2);
+   Obstacle obstacle_3(0.0,0.0,2.0,2.0);
 
-   try{
+   env.add_obstacle(obstacle_1);
+   env.add_obstacle(obstacle_2);
+   env.add_obstacle(obstacle_3);
 
-    env.add_obstacle(obstacle_1);
 
-   }catch(std::exception& e){
+   env.remove_obstacle(8);
 
-    std::cout << e.what() << std::endl;
-
-   }
-
-    try{
-
-   
-    env.add_obstacle(obstacle_2);
-    
-
-   }catch(std::exception& e){
-
-    std::cout << e.what() << std::endl;
-
-   }
-    try{
-
-    
-    env.add_obstacle(obstacle_3);
-
-   }catch(std::exception& e){
-
-    std::cout << e.what() << std::endl;
-
-   }
     /*double speed = 1.0; // meters per second
     double angular_velocity = 0.0; // radians per second
 

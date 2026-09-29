@@ -18,20 +18,21 @@ class Obstacle{
         
         void print_info();
 
-        int get_id(){
+        int get_id() const{
             return id;
         }
 
-        double get_x_position(){
+        double get_x_position() const{ // Const to ensure the getter is not going to modify the object 
+                                       //so it can be used with the object if it's passed as const in another function
             return x_position;
         }
-        double get_y_position(){
+        double get_y_position() const{
             return y_position;
         }
-        double get_width(){
+        double get_width() const{
             return width;
         }
-        double get_length(){
+        double get_length() const{
             return length;
         }
 };
