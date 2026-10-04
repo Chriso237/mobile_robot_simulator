@@ -224,6 +224,30 @@ src/robot.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mobile_robot_sim.dir\build.make CMakeFiles/mobile_robot_sim.dir/src/robot.cpp.s
 .PHONY : src/robot.cpp.s
 
+src/sensor.obj: src/sensor.cpp.obj
+.PHONY : src/sensor.obj
+
+# target to build an object file
+src/sensor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mobile_robot_sim.dir\build.make CMakeFiles/mobile_robot_sim.dir/src/sensor.cpp.obj
+.PHONY : src/sensor.cpp.obj
+
+src/sensor.i: src/sensor.cpp.i
+.PHONY : src/sensor.i
+
+# target to preprocess a source file
+src/sensor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mobile_robot_sim.dir\build.make CMakeFiles/mobile_robot_sim.dir/src/sensor.cpp.i
+.PHONY : src/sensor.cpp.i
+
+src/sensor.s: src/sensor.cpp.s
+.PHONY : src/sensor.s
+
+# target to generate assembly for a file
+src/sensor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mobile_robot_sim.dir\build.make CMakeFiles/mobile_robot_sim.dir/src/sensor.cpp.s
+.PHONY : src/sensor.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -245,6 +269,9 @@ help:
 	@echo ... src/robot.obj
 	@echo ... src/robot.i
 	@echo ... src/robot.s
+	@echo ... src/sensor.obj
+	@echo ... src/sensor.i
+	@echo ... src/sensor.s
 .PHONY : help
 
 

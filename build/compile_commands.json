@@ -22,5 +22,11 @@
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles\\mobile_robot_sim.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\mobile_robot_sim.dir\\src\\environment.cpp.obj -c C:\\Users\\HP\\Desktop\\Mobile_Robot_Simulator\\src\\environment.cpp",
   "file": "C:/Users/HP/Desktop/Mobile_Robot_Simulator/src/environment.cpp",
   "output": "CMakeFiles/mobile_robot_sim.dir/src/environment.cpp.obj"
+},
+{
+  "directory": "C:/Users/HP/Desktop/Mobile_Robot_Simulator/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles\\mobile_robot_sim.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\mobile_robot_sim.dir\\src\\sensor.cpp.obj -c C:\\Users\\HP\\Desktop\\Mobile_Robot_Simulator\\src\\sensor.cpp",
+  "file": "C:/Users/HP/Desktop/Mobile_Robot_Simulator/src/sensor.cpp",
+  "output": "CMakeFiles/mobile_robot_sim.dir/src/sensor.cpp.obj"
 }
 ]

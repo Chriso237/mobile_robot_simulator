@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mobile_robot_sim.dir/src/obstacle.cpp.obj.d"
   "CMakeFiles/mobile_robot_sim.dir/src/robot.cpp.obj"
   "CMakeFiles/mobile_robot_sim.dir/src/robot.cpp.obj.d"
+  "CMakeFiles/mobile_robot_sim.dir/src/sensor.cpp.obj"
+  "CMakeFiles/mobile_robot_sim.dir/src/sensor.cpp.obj.d"
   "libmobile_robot_sim.dll.a"
   "mobile_robot_sim.exe"
   "mobile_robot_sim.exe.manifest"
