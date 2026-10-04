@@ -8,10 +8,13 @@ class Robot{
         double y_position; // meters
         double theta_orientation; // radians
 
+        double wheel_radius;
+        double wheel_base;
+
     public:
-        Robot(double x, double y, double theta);
+        Robot(double x, double y, double theta, double r, double L);
         
-        void update_pose(double speed, double angular_velocity, double dt);
+        void update_pose(double omega_left, double omega_rigth, double dt);
         void print_state();
        
 
