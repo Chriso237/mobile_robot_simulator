@@ -16,6 +16,18 @@ class Robot{
         
         void update_pose(double omega_left, double omega_rigth, double dt);
         void print_state();
+
+        double get_x_postion() const{
+            return x_position;
+        }
+
+        double get_y_position() const{
+            return y_position;
+        }
+
+        double get_theta_orientation() const{
+            return theta_orientation;
+        }
        
 
 };
