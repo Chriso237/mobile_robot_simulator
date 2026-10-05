@@ -14,10 +14,10 @@ class Robot{
     public:
         Robot(double x, double y, double theta, double r, double L);
         
-        void update_pose(double omega_left, double omega_rigth, double dt);
+        void update_pose(double omega_left, double omega_right, double dt);
         void print_state();
 
-        double get_x_postion() const{
+        double get_x_position() const{
             return x_position;
         }
 
