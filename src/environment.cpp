@@ -1,30 +1,45 @@
 #include "environment.hpp"
 #include "obstacle.hpp"
 #include <vector>
-#include <string>
-#include <sstream>
 #include <iostream>
+  
 
 
+void Environment::add_obstacle(const Obstacle& obstacle) {
+    const double x = obstacle.get_x_position();
+    const double y = obstacle.get_y_position();
+    const double obstacle_width = obstacle.get_width();
+    const double obstacle_length = obstacle.get_length();
 
-Environment::Environment(double l, double w) : length(l), width(w){}
-
-void Environment::add_obstacle(const Obstacle& obstacle){
-    std::stringstream ss;
-    if((obstacle.get_x_position() < 0 || (obstacle.get_y_position() < 0)) 
-    || ( (obstacle.get_x_position() + obstacle.get_length() > length) 
-    || (obstacle.get_y_position() + obstacle.get_width() > width))){
-
-        ss << "Wouha! obstcale with ID: " << obstacle.get_id() << " Cannot be placed wrong place/size maybe ? ;)\n";
-
-    }else{
-        obstacles.push_back(obstacle);
-        ss << "Obstacle " << obstacle.get_id() << " succesfully added! :)\n";
+    // Check that the obstacle has positive dimensions and fits in the environment.
+    if (x < 0 || y < 0 ||
+        obstacle_width <= 0 || obstacle_length <= 0 ||
+        x + obstacle_width > length ||
+        y + obstacle_length > width) {
+        std::cout << "Obstacle " << obstacle.get_id()
+                  << " cannot be placed: invalid size or outside the environment.\n";
+        return;
     }
 
-    std::string log_entry = ss.str();
-    std::cout << log_entry;
-    
+    for (const Obstacle& existing : obstacles) {
+        const bool overlap_x =
+            x < existing.get_x_position() + existing.get_width() &&
+            x + obstacle_width > existing.get_x_position();
+
+        const bool overlap_y =
+            y < existing.get_y_position() + existing.get_length() &&
+            y + obstacle_length > existing.get_y_position();
+
+        if (overlap_x && overlap_y) {
+            std::cout << "Obstacle " << obstacle.get_id()
+                      << " cannot be placed: it overlaps obstacle "
+                      << existing.get_id() << ".\n";
+            return;
+        }
+    }
+
+    obstacles.push_back(obstacle);
+    std::cout << "Obstacle " << obstacle.get_id() << " successfully added.\n";
 }
 
 void Environment::remove_obstacle(int obstacle_id){
@@ -41,4 +56,19 @@ void Environment::remove_obstacle(int obstacle_id){
 
     std::cout << "No obstacle corresponding" << std::endl;
 
+}
+
+double Environment::get_length() const {
+    return length;
+}
+double Environment::get_width() const {
+    return width;
+}
+
+size_t Environment::get_obstacle_count() const{
+    return obstacles.size();
+}
+
+const std::vector<Obstacle>& Environment::get_obstacles() const {
+    return obstacles;
 }
