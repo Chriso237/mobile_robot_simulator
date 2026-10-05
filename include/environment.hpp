@@ -19,6 +19,11 @@ class Environment{
 
         void add_obstacle(const Obstacle& obstacle); // add obstacle in the environment
         void remove_obstacle(int obstacle_id); // removes the obstacle from the environment
+
+        double get_length() const;
+        double get_width() const;
+        size_t get_obstacle_count() const;
+        const std::vector<Obstacle>& get_obstacles() const;
         
 };
 
