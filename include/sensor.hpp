@@ -2,6 +2,8 @@
 #define SENSOR_HPP
 
 #include "robot.hpp"
+#include "obstacle.hpp"
+#include <vector>
 
 typedef struct{
     double x;
@@ -27,6 +29,8 @@ class Sensor{
         so the detectionn is based on which point intersects with the ray.
         
         */
+
+        bool detect_intersection(const std::vector<Obstacle>& obstcales, Point p) const;
 };
 
 #endif
