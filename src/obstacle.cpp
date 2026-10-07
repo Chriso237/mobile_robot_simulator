@@ -13,7 +13,7 @@ void Obstacle::print_info(){
             << "    id: " << id << "\n"
             << "    X position: " << x_position << "\n"
             << "    Y postion: " << y_position << "\n"
-            << "    Width: " << width / 100 << " cm\n"
-            << "    Length: " << length / 100 << " cm\n"
+            << "    Width: " << width / 100 << " m\n"
+            << "    Length: " << length / 100 << " m\n"
             << "}" << std::endl;
 }
