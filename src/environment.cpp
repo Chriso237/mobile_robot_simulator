@@ -2,8 +2,8 @@
 #include "obstacle.hpp"
 #include <vector>
 #include <iostream>
-  
 
+Environment::Environment(double l, double w): length(l), width(w){};
 
 void Environment::add_obstacle(const Obstacle& obstacle) {
     const double x = obstacle.get_x_position();
